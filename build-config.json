@@ -1,0 +1,12 @@
+{
+  "artifact": "Builders-Utilities-2.1.1-SNAPSHOT.jar",
+  "compile": [
+    "source/net/arcaniax/buildersutilities/commands/NoClipCommand.java",
+    "source/net/arcaniax/buildersutilities/commands/UtilsCommand.java",
+    "source/net/arcaniax/buildersutilities/menus/Menus.java",
+    "source/net/arcaniax/buildersutilities/menus/SecretBlockMenuProvider.java",
+    "source/net/arcaniax/buildersutilities/menus/UtilitiesMenuProvider.java"
+  ],
+  "resources": [],
+  "original_sha256": "d7b76d72a30170209098d0516ece356366156c17691bea1bd9b67010239a124d"
+}

@@ -1,31 +1,19 @@
-<p align="center">
-    <img src="https://i.imgur.com/rFBzoq0.png">
-</p>
+# builders-utilities
 
----
+Taixue maintenance source for Paper 26.3 / Java 25.
 
-Builders-Utilities was a requested plugin by Alex_deGrote,
-who won the plugin giveaway at my panel from McBcon.
-This plugin is a collection of a lot of tiny features that help with building.
+## Build
 
-<p align="center">
-    <a href="https://bstats.org/plugin/bukkit/BuildersUtilities/5168" title="Builders-Utilities on bStats">
-        <img src="https://bstats.org/signatures/bukkit/BuildersUtilities.svg" />
-    </a>
-</p>
+Install JDK 25, Python 3 and GitHub CLI. Authenticate `gh` with read access to taixue-cn/minecraft-plugin-build-sdk, then run:
 
-## Links
+```sh
+python3 build.py
+```
 
-* [Download](https://www.spigotmc.org/resources/builders-utilities.42361/)
-* [Development Builds](https://ci.athion.net/job/Builders-Utilities/)
-* [Discord](https://discord.gg/jpRVrjd)
-* [Issues](https://github.com/Arcaniax-Development/Builders-Utilities/issues)
+`build-config.json` lists the exact adapted sources; `source/` retains the available upstream or recovered source. `vendor/original.jar` is a hash-locked build input preserving unchanged classes, bundled dependencies and resources. This is an overlay build, not a claim that every bundled dependency was reconstructed from source. To change another class, add its source to the compile list. Source provenance and original hash are recorded in SOURCE-PROVENANCE.json. Upstream license notices are retained in source and JARs.
 
-# Building
-Gradle is the recommended way to build the project. Use `./gradlew build` in the main project directory to build the project.
+The SDK release and every dependency are checked against sdk-lock.json before compilation. Output is under `dist/`, with SHA256SUMS. Actions builds on main and PRs; successful main builds publish a release tied to the exact commit. Configure SOURCE_READ_TOKEN with read access to the private SDK repository.
 
-# Contributing
-See [here](https://github.com/Brennian/Builders-Utilities/blob/master/CONTRIBUTING.md)
+## Server updates
 
-## Suggestions
-Suggestions are welcome! We have a separate issue form for suggestions, which can be found [here](https://github.com/Arcaniax-Development/Builders-Utilities/issues).
+Back up the installed JAR, place the replacement in plugins/update/, and wait for an explicitly authorized restart. A published distribution does not mean it is loaded on a server. No workflow deploys, stops, restarts or reloads Minecraft.

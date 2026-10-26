@@ -1,0 +1,8 @@
+{
+  "source_path": "/back/users/taixue/services/minecraft/servers/architecture/backups/plugin-backups/plugin-backups/maintenance-artifacts-20261024/arch-paper26.3-20261024/building-toolbox-20261024/source",
+  "original_distribution_sha256": "d7b76d72a30170209098d0516ece356366156c17691bea1bd9b67010239a124d",
+  "target": "Paper 26.3 build 218 / Java 25",
+  "method": "Compile the preserved adapted Java source and overlay it onto the checksum-locked distribution. The original retains bundled libraries and unchanged classes/resources.",
+  "source_files": 5,
+  "compiled_source_files": 5
+}
